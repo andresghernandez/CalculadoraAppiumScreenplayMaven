@@ -2,6 +2,7 @@ package com.co.calculadora.stepdefinitions;
 
 import com.co.calculadora.tasks.CalculadoraAppTask;
 import com.co.calculadora.utils.AppCalculadora;
+import com.co.calculadora.utils.AppCalculadoraSauceLabs;
 import com.co.calculadora.utils.DataDrivenExcel;
 import com.co.calculadora.utils.Excel;
 import cucumber.api.DataTable;
@@ -35,6 +36,7 @@ public class CalculadoraAppStepDefinition {
         Excel excel = new Excel(dataFeature.get(0).get("Ruta Excel"), dataFeature.get(0).get("Pestaña"), true, row);
         data = dataDriverExcel.leerExcel(excel);
         NICOLAS.can(BrowseTheWeb.with(AppCalculadora.onThePhone().getMyDriver()));
+        //NICOLAS.can(BrowseTheWeb.with(AppCalculadoraSauceLabs.onThePhone().getMyDriver()));
     }
 
     @When("^realiza operaciones matematicas$")
