@@ -36,7 +36,6 @@ public class CalculadoraAppStepDefinition {
         Excel excel = new Excel(dataFeature.get(0).get("Ruta Excel"), dataFeature.get(0).get("Pestaña"), true, row);
         data = dataDriverExcel.leerExcel(excel);
         NICOLAS.can(BrowseTheWeb.with(AppCalculadora.onThePhone().getMyDriver()));
-        //NICOLAS.can(BrowseTheWeb.with(AppCalculadoraSauceLabs.onThePhone().getMyDriver()));
     }
 
     @When("^realiza operaciones matematicas$")
@@ -48,4 +47,16 @@ public class CalculadoraAppStepDefinition {
     public void puede_validar_el_resultado_obtenido() {
 
     }
+    
+    
+    
+    @Given("^que Nicolas ingresa a la aplicacion de la calculadora Sauce Labs (\\d+)$")
+    public void que_Nicolas_ingresa_a_la_aplicacion_de_la_calculadora_Sauce_Labs(int row, DataTable dataExcel) {
+        List<Map<String, String>> dataFeature = dataExcel.asMaps(String.class, String.class);
+        Excel excel = new Excel(dataFeature.get(0).get("Ruta Excel"), dataFeature.get(0).get("Pestaña"), true, row);
+        data = dataDriverExcel.leerExcel(excel);
+        NICOLAS.can(BrowseTheWeb.with(AppCalculadoraSauceLabs.onThePhone().getMyDriver()));
+    }
+    
+    
 }

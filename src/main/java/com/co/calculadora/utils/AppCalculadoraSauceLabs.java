@@ -24,6 +24,7 @@ public class AppCalculadoraSauceLabs {
     	caps.setCapability("appium:deviceName","Android GoogleAPI Emulator");
     	caps.setCapability("appium:deviceOrientation", "portrait");
     	caps.setCapability("appium:platformVersion","12.0");
+    	caps.setCapability("appium:automationName", "UiAutomator2");
     	caps.setCapability("appium:app", "storage:filename=calculator-7-8-271241277.apk");
     	MutableCapabilities sauceOptions = new MutableCapabilities();
     	sauceOptions.setCapability("build", "Calculadora");
@@ -31,7 +32,7 @@ public class AppCalculadoraSauceLabs {
     	caps.setCapability("sauce:options", sauceOptions);
     	
         try {
-            myDriver = new AppiumDriver<>(new URL("https://aghernandez:997c7336-f894-4684-9b9f-55b77f414e5b@ondemand.us-west-1.saucelabs.com:443/wd/hub"),caps);
+            myDriver = new AppiumDriver<>(new URL("https://andreshernandezautomatizacion:bc21f023-3aa7-4805-81eb-a58bdbf57577@ondemand.us-west-1.saucelabs.com:443/wd/hub"),caps);
         }catch (MalformedURLException e) {} return myDriver;
         
     }

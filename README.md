@@ -4,6 +4,7 @@ Example:
 - Open a command window and run:
 
 	mvn clean verify -D tags=operacionesCalculadora
+	mvn clean verify -D tags=operacionesCalculadoraSauceLabs
 	
 
 ## Viewing the reports
