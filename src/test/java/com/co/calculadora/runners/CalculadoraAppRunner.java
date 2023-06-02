@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/",
         glue = "com.co.calculadora.stepdefinitions",
-        tags = {"@operacionesCalculadoraSauceLabs"}
+        tags = {""}
 )
 public class CalculadoraAppRunner {
 }
