@@ -7,6 +7,8 @@ Example:
 	
 	`mvn clean verify -D tags=operacionesCalculadoraSauceLabs`
 	
+	`mvn clean verify -D tags=operacionesCalculadoraPerfecto`
+	
 
 ## Viewing the reports
 

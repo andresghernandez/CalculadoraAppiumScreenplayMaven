@@ -27,3 +27,16 @@ Feature: Realizar Operaciones Calculadora
       | Fila |
       |    1 |    
       
+      
+  @operacionesCalculadoraPerfecto
+  Scenario Outline: Realizar Operaciones Calculadora
+    Given que Nicolas ingresa a la aplicacion de la calculadora perfecto <Fila>
+      | Ruta Excel                         | Pestaña                |
+      | src/test/resources/data/Datos.xlsx | OperacionesMatematicas |
+    When realiza operaciones matematicas
+    Then puede validar el resultado obtenido
+
+    Examples:
+      | Fila |
+      |    1 |         
+      

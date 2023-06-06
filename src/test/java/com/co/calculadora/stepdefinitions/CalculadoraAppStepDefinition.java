@@ -2,6 +2,7 @@ package com.co.calculadora.stepdefinitions;
 
 import com.co.calculadora.tasks.CalculadoraAppTask;
 import com.co.calculadora.utils.AppCalculadora;
+import com.co.calculadora.utils.AppCalculadoraPerfectoMobile;
 import com.co.calculadora.utils.AppCalculadoraSauceLabs;
 import com.co.calculadora.utils.DataDrivenExcel;
 import com.co.calculadora.utils.Excel;
@@ -58,5 +59,14 @@ public class CalculadoraAppStepDefinition {
         NICOLAS.can(BrowseTheWeb.with(AppCalculadoraSauceLabs.onThePhone().getMyDriver()));
     }
     
+    
+    @Given("^que Nicolas ingresa a la aplicacion de la calculadora perfecto (\\d+)$")
+    public void que_Nicolas_ingresa_a_la_aplicacion_de_la_calculadora_perfecto(int row, DataTable dataExcel) {
+        List<Map<String, String>> dataFeature = dataExcel.asMaps(String.class, String.class);
+        Excel excel = new Excel(dataFeature.get(0).get("Ruta Excel"), dataFeature.get(0).get("Pestaña"), true, row);
+        data = dataDriverExcel.leerExcel(excel);
+        NICOLAS.can(BrowseTheWeb.with(AppCalculadoraPerfectoMobile.onThePhone().getMyDriver()));
+    }
+
     
 }
