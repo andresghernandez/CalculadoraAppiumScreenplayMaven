@@ -39,7 +39,7 @@ public class AppCalculadoraPerfectoMobile {
         capabilities.setCapability("model", "Galaxy S9");
 
 		// 4. Set the Perfecto media repository path of the app under test.
-		capabilities.setCapability("app", "PRIVATE:1685735563009_calculator-7-8-271241277.apk");
+		capabilities.setCapability("app", "PRIVATE:1686666345551_calculator-7-8-271241277.apk");
 
 		// 5. Set the unique identifier of your app - this is highly recommended
 		//capabilities.setCapability("appPackage", "YOUR.APP.APPPACKAGE");
